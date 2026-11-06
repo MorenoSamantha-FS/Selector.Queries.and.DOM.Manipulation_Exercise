@@ -10,7 +10,13 @@
     });
   });
   console.log("All Teams:", allTeams);
+
   // TASK 2: Create an array of all first-place teams
+  const firstPlaceTeams = Array.from(leagues).map((league) => {
+    return league.querySelector("li:first-child").textContent;
+  });
+  console.log("First Place Teams:", firstPlaceTeams);
+
   // TASK 3: Create an array of all second-place teams
   // TASK 4: Remove La Liga from the DOM
   // TASK 5: Add a new league to the end of the leagues list
