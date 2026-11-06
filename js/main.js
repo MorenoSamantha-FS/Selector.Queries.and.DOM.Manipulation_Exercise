@@ -1,7 +1,15 @@
 "use strict";
 (() => {
   // Get all the league sections from the HTML
+  const leagues = document.querySelectorAll("main > section");
+
   // TASK 1: Create an array of all teams
+  const allTeams = Array.from(leagues).flatMap((league) => {
+    return Array.from(league.querySelectorAll("li"), (team) => {
+      return team.textContent;
+    });
+  });
+  console.log("All Teams:", allTeams);
   // TASK 2: Create an array of all first-place teams
   // TASK 3: Create an array of all second-place teams
   // TASK 4: Remove La Liga from the DOM
