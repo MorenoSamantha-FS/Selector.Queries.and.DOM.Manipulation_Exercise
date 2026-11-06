@@ -18,6 +18,11 @@
   console.log("First Place Teams:", firstPlaceTeams);
 
   // TASK 3: Create an array of all second-place teams
+  const secondPlaceTeams = Array.from(leagues).map((league) => {
+    return league.querySelector("li:nth-child(2)").textContent;
+  });
+  console.log("Second Place Teams:", secondPlaceTeams);
+
   // TASK 4: Remove La Liga from the DOM
   // TASK 5: Add a new league to the end of the leagues list
   // Create the new league section
