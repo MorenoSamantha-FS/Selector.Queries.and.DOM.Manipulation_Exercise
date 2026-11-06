@@ -24,6 +24,12 @@
   console.log("Second Place Teams:", secondPlaceTeams);
 
   // TASK 4: Remove La Liga from the DOM
+  const laLiga = Array.from(leagues).find((league) => {
+    return league.querySelector("h2").textContent === "La Liga";
+  });
+  if (laLiga) {
+    laLiga.remove();
+  }
   // TASK 5: Add a new league to the end of the leagues list
   // Create the new league section
   //Create and populate the new league heading
